@@ -34,6 +34,6 @@ export const CHOICES = {
     }
   
     if (userChoice === computerChoice) result = "Tie game!";
-    return [result, computerChoice];
+    return [result, computerChoice]; // [0, 1] -> [a, b]
   
   };

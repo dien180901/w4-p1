@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
-import './App.css';
+
 import ChoiceButtons from "./components/ChoiceButtons";
 import ChoiceCard from './components/ChoiceCard'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CHOICES, getRoundOutcome } from "./utils";
+import './App.css';
+import { Button } from 'react-bootstrap';
 
 function App() {
+  
   const [prompt, setGamePrompt] = useState("1, 2, 3, SHOOT!");
-
+  
+  const[start,setStart]=useState(false);
   const [playerChoice, setPlayerChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
   const [previousWinner, setPreviousWinner] = useState(null);
@@ -15,7 +19,7 @@ function App() {
   
   const onPlayerChoose = playerChoice => {
     const [result, compChoice] = getRoundOutcome(playerChoice);
-
+console.log("result ", result);
     const newUserChoice = CHOICES[playerChoice];
     const newComputerChoice = CHOICES[compChoice];
 
@@ -33,7 +37,17 @@ function App() {
     setGamePrompt(result);
 
   };
-  return (
+
+  if (!start) {
+    return(<button
+      className="btn btn-success btn-lg"
+      onClick={() => {setStart(true)}}
+    >
+      Start
+    </button>);
+  }
+
+ return (
     <div className="App">
       <div className="col-md-4 themed-grid-col">
         <h3>History</h3>
@@ -65,5 +79,4 @@ function App() {
 
   );
 }
-
 export default App;

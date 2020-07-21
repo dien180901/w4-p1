@@ -3,13 +3,15 @@ const DEFAULT_IMG =
   "http://www.thewateringhole.co.uk/wp-content/uploads/2012/12/play.png"
 export default function ChoiceCard(props) {
     const won = props.title === props.previousWinner;
+    console.log("title",props.title," previous",props.previousWinner," ",won);
     let className;
+    
     const hasPreviousGame =
       props.previousWinner === "Computer" || props.previousWinner === "You";
     if (hasPreviousGame) {
       className = won ? "winner" : "loser";
     }
-  
+    
     let prompt;
     if (won) {
       prompt = "Won";
