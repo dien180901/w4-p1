@@ -5,7 +5,7 @@ import ChoiceCard from './components/ChoiceCard'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CHOICES, getRoundOutcome } from "./utils";
 import './App.css';
-import { Button } from 'react-bootstrap';
+
 
 function App() {
   
