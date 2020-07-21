@@ -5,34 +5,48 @@
   text-align: center;
   background-color: #e9ebee;
 }
+
 .choice-card {
   flex: 1;
   display: flex;
-  margin: 100px;
+  margin: 25px;
   font-size: 3em;
   padding: 0 40px;
   font-weight: 300;
   text-align: center;
   border-radius: 25px;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   border: 1px solid black;
   background-color: white;
   justify-content: space-around;
+  border: 10px solid black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 img {
-  width: 250px;
-  height: 250px;
+  width: 225px;
+  height: 225px;
 }
+
 h1 {
   font-size: 50px;
-}
+} 
+
 .winner {
   color: green;
   border: 10px solid green;
 }
+
 .loser {
   color: red;
   border: 10px solid red;
+}
+
+button {
+  margin: 15px;
+}
+
+ul {
+  list-style: none;
 }
